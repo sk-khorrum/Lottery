@@ -1,44 +1,167 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f9fa;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #007bff;
-    color: white;
+    background-color: #1a1a1a;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    color: white;
     font-size: 24px;
 }
 
-main {
-    margin-top: 50px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #28a745;
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
     color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1500x600'); /* Hero image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
 }
 
-button:hover {
-    background: #218838;
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
 }
 
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #343a40;
+    background-color: #1a1a1a;
     color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* লগইন পপ-আপ স্টাইল */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    text-align: center;
+}
+
+.modal input, .modal button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.modal button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #218838;
+}
+
+.close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
