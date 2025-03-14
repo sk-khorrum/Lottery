@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লটারি সিস্টেম</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎟️ আজকের লটারি ড্র</h1>
+    </header>
+
+    <div class="container">
+        <!-- রেজিস্ট্রেশন ফর্ম -->
+        <h2>রেজিস্ট্রেশন</h2>
+        <input type="email" id="registerEmail" placeholder="আপনার ইমেইল লিখুন">
+        <input type="password" id="registerPassword" placeholder="পাসওয়ার্ড লিখুন">
+        <button onclick="register()">রেজিস্টার করুন</button>
+        
+        <!-- লগইন ফর্ম -->
+        <h2>লগইন</h2>
+        <input type="email" id="loginEmail" placeholder="আপনার ইমেইল লিখুন">
+        <input type="password" id="loginPassword" placeholder="পাসওয়ার্ড লিখুন">
+        <button onclick="login()">লগইন করুন</button>
+        
+        <!-- লগআউট বোতাম -->
+        <button onclick="logout()">লগআউট করুন</button>
+    </div>
+
+    <!-- লটারি নম্বর জেনারেটর -->
+    <main>
+        <button onclick="generateLottery()">লটারি নম্বর জেনারেট করুন</button>
+        <h2 id="lotteryNumber">???</h2>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 লটারি সিস্টেম</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
+    
+    <!-- স্ক্রিপ্ট ফাইল -->
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
