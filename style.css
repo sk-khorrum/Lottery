@@ -164,4 +164,29 @@ footer a:hover {
     margin: 10px 0;
     font-size: 18px;
     border-radius: 5px;
-    border: 1px
+    border: 1px solid #ddd;
+}
+
+.modal button {
+    background-color: #0a4b7f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #0071a1;
+}
+
+.modal .close {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #333;
+}
