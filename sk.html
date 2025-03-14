@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Example</title>
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        iframe {
+            position: absolute;
+            top: -20px; /* উপরের অংশ ঢেকে দেওয়া */
+            bottom: -20px; /* নিচের অংশ ঢেকে দেওয়া */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 40px); /* height বড় করে নিচের এবং উপরের অংশ ঢেকে দেওয়া */
+            border: 1px solid #ccc; /* বর্ডার সেট করা */
+        }
+    </style>
+</head>
+<body>
+
+<div class="iframe-container">
+    <iframe src="https://casinoscores.com/games/" frameborder="0"></iframe>
+</div>
+
+</body>
+</html>
