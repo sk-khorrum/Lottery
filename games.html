@@ -24,12 +24,20 @@
 
     <section class="casino-game">
         <iframe 
+    id="myIframe" 
     src="https://casinoscores.com/crazy-time/" 
     width="100%" 
     height="600" 
-    style="border: none; overflow: hidden; pointer-events: none;" 
+    style="border: none; overflow: hidden; pointer-events: auto;" 
     scrolling="no">
-        </iframe>
+</iframe>
+
+<script>
+    // যখন iframe এ ক্লিক করা হবে, নতুন উইন্ডো বা ট্যাব খুলবে
+    document.getElementById('myIframe').addEventListener('click', function() {
+        window.open('https://casinoscores.com/crazy-time/', '_blank');
+    });
+</script>
     </section>
 
 </body>
