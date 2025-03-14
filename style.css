@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +6,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
     color: #333;
-    line-height: 1.6;
 }
 
+/* Navbar Styles */
 header {
-    background-color: #1a1a1a;
-    padding: 20px 30px;
+    background-color: #0a4b7f;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,16 +23,14 @@ header {
     z-index: 1000;
 }
 
-header .logo h1 {
-    color: white;
-    font-size: 30px;
-    letter-spacing: 2px;
+header .logo img {
+    width: 120px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 header nav ul li {
@@ -42,15 +41,17 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #007bff;
+    color: #FFD700;
 }
 
+/* Hero Section Styles */
 .hero {
-    background-image: url('https://via.placeholder.com/1500x600'); /* Hero image */
+    background-image: url('https://via.placeholder.com/1600x700/0a4b7f/FFFFFF'); 
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
@@ -59,20 +60,20 @@ header nav ul li a:hover {
 }
 
 .hero-content h2 {
-    font-size: 45px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
 .hero button {
-    padding: 15px 35px;
-    background-color: #007bff;
-    color: white;
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #0a4b7f;
     font-size: 20px;
     border: none;
     border-radius: 5px;
@@ -81,38 +82,40 @@ header nav ul li a:hover {
 }
 
 .hero button:hover {
-    background-color: #0056b3;
+    background-color: #ffcc00;
 }
 
+/* Features Section Styles */
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #ffffff;
-    margin-top: 30px;
+    padding: 60px 20px;
+    background-color: white;
 }
 
 .feature {
     text-align: center;
     width: 30%;
-    padding: 20px;
-    background-color: #f8f9fa;
+    padding: 30px;
+    background-color: #f8f8f8;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .feature h3 {
     font-size: 26px;
-    margin-bottom: 10px;
-    color: #007bff;
+    margin-bottom: 15px;
+    color: #0a4b7f;
 }
 
 .feature p {
     font-size: 18px;
+    color: #666;
 }
 
+/* Footer Styles */
 footer {
-    background-color: #1a1a1a;
+    background-color: #0a4b7f;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -121,14 +124,13 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
-    transition: text-decoration 0.3s;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* লগইন পপ-আপ স্টাইল */
+/* Login Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -137,22 +139,22 @@ footer a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: white;
     padding: 30px;
     width: 350px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content h2 {
     text-align: center;
-    color: #007bff;
+    color: #0a4b7f;
     margin-bottom: 20px;
 }
 
@@ -162,29 +164,4 @@ footer a:hover {
     margin: 10px 0;
     font-size: 18px;
     border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.modal button {
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.modal button:hover {
-    background-color: #218838;
-}
-
-.modal .close {
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #aaa;
-    cursor: pointer;
-}
-
-.modal .close:hover {
-    color: #333;
-}
+    border: 1px
