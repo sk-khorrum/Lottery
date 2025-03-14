@@ -3,47 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>লটারি সিস্টেম</title>
+    <title>1xBet - হোম পেজ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>🎟️ আজকের লটারি ড্র</h1>
+        <div class="logo">
+            <h1>1xBet</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">হোম</a></li>
+                <li><a href="#">স্পোর্টস</a></li>
+                <li><a href="#">ক্যাসিনো</a></li>
+                <li><a href="#">লাইভ ক্যাসিনো</a></li>
+                <li><a href="#">প্রচার</a></li>
+                <li><a href="#">যোগাযোগ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <!-- রেজিস্ট্রেশন ফর্ম -->
-        <h2>রেজিস্ট্রেশন</h2>
-        <input type="email" id="registerEmail" placeholder="আপনার ইমেইল লিখুন">
-        <input type="password" id="registerPassword" placeholder="পাসওয়ার্ড লিখুন">
-        <button onclick="register()">রেজিস্টার করুন</button>
-        
-        <!-- লগইন ফর্ম -->
-        <h2>লগইন</h2>
-        <input type="email" id="loginEmail" placeholder="আপনার ইমেইল লিখুন">
-        <input type="password" id="loginPassword" placeholder="পাসওয়ার্ড লিখুন">
-        <button onclick="login()">লগইন করুন</button>
-        
-        <!-- লগআউট বোতাম -->
-        <button onclick="logout()">লগআউট করুন</button>
+    <!-- লগইন পপ-আপ -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>লগইন করুন</h2>
+            <form id="loginForm" onsubmit="login(event)">
+                <input type="email" id="loginEmail" placeholder="ইমেইল লিখুন" required>
+                <input type="password" id="loginPassword" placeholder="পাসওয়ার্ড লিখুন" required>
+                <button type="submit">লগইন করুন</button>
+            </form>
+        </div>
     </div>
 
-    <!-- লটারি নম্বর জেনারেটর -->
-    <main>
-        <button onclick="generateLottery()">লটারি নম্বর জেনারেট করুন</button>
-        <h2 id="lotteryNumber">???</h2>
-    </main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>আপনার প্রিয় স্পোর্টস এবং ক্যাসিনো খেলা এখন এক সাইটে!</h2>
+            <p>জয়ী হওয়া সহজ, 1xBet-এ বেট করুন এবং আপনার ভাগ্য বদলান।</p>
+            <button onclick="playNow()">এখনই খেলুন</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>স্পোর্টস বেটিং</h3>
+            <p>ফুটবল, ক্রিকেট, বাস্কেটবল এবং আরও অনেক কিছু।</p>
+        </div>
+        <div class="feature">
+            <h3>লাইভ ক্যাসিনো</h3>
+            <p>লাইভ ডিলারদের সাথে খেলা এবং বেটিং।</p>
+        </div>
+        <div class="feature">
+            <h3>মোবাইল অ্যাপ</h3>
+            <p>যেকোনো স্থানে, যেকোনো সময় বেটিং করুন।</p>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 লটারি সিস্টেম</p>
+        <p>&copy; ২০২৫ 1xBet. সব অধিকার সংরক্ষিত।</p>
+        <p><a href="#">গোপনীয়তা নীতি</a> | <a href="#">শর্তাবলী</a></p>
     </footer>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"></script>
-    
-    <!-- স্ক্রিপ্ট ফাইল -->
-    <script src="firebase-config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
